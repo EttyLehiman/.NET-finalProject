@@ -1,49 +1,32 @@
-Markdown
-# ASP.NET MVC Web API To-Do List App👌
+# ASP.NET MVC Web API To-Do List with Google Login👌
 
-This project is a RESTful API for managing a user's to-do list, with optional admin functionalities. It utilizes ASP.NET MVC and implements authorization for secure access control.
+This project showcases a RESTful API for managing to-do lists, empowering users to organize their tasks seamlessly. It leverages ASP.NET MVC and incorporates authorization for secure access control.
 
-## Functionality
+## Highlights
 
-* **User Management:**
-    * Users can register, log in, and view their own to-do items. (Basic users)
-    * Admins can add, edit, and delete all users and their to-do items. (Admin users)
-* **To-Do Management:**
-    * Users can add, update, and delete their own to-do items.
-    * To-do items include details like description and location (optional).
+- **Comprehensive To-Do Management:**
+    - Users can add, edit, and delete their own to-do items.
+    - To-do items include details like description and location (optional).
 
-## API Endpoints
+- **User Management:**
+    - Users can register, log in, and view their own to-do items.
+    - Google account login integration enables convenient authentication.
 
-| URL                | Method | Authorization | Description                        | Request Body | Response Body          |
-|--------------------|--------|---------------|------------------------------------|---------------|-------------------------|
-| /api/todo          | GET    | User           | Get all user's to-do items           | -             | List of to-do items       |
-| /api/todo/{id}     | GET    | User           | Get a specific user's to-do item by ID | -             | To-do item details      |
-| /api/todo          | POST   | User           | Add a new to-do item                | To-do details | Created to-do item details |
-| /api/todo/{id}     | PUT    | User           | Update a user's to-do item          | To-do details | Updated to-do item details |
-| /api/todo/{id}     | DELETE | User           | Delete a user's to-do item           | -             | Success/Failure message |
-| /api/user          | GET    | User (Admin)  | Get current user details (User) / Get all users (Admin) | -             | User details / List of users |
-| /api/user          | POST   | Admin          | Add a new user                     | User details  | Created user details   |
-| /api/user/{id}     | DELETE | Admin          | Delete a user and their to-do items | -             | Success/Failure message |
-| /api/login         | POST   | -              | Login with username/password        | Login credentials | JWT token               |
+- **Admin Privileges:**
+    - Admins can add, edit, and delete all users and their to-do items.
 
-## Technical Details
+- **Robust API Endpoints:**
+    - Well-defined API endpoints facilitate interaction with the application.
 
-* Persistent Storage: JSON files (temporary, consider database integration)
-* Dependency Injection: Facilitates switching to database storage in the future
-* Logging: Records request details (start time, controller/action, user, duration)
+- **Postman Integration:**
+    - A Postman button on the login page enables easy API testing.
 
-## Client Notes
+## Technologies Employed
 
-* Default page displays user's to-do list (add, update, delete options).
-* Login page displayed if no token or expired token.
-* Admin users have a link to manage users.
-* Login page includes a Postman button for testing API endpoints.
-
-## Challenges (Optional)
-
-* User details update (name, password)
-* Admin to-do management as a regular user
-* Google account login integration
+- ASP.NET MVC: The framework for building the web API.
+- JSON Files: For temporary data storage (consider database integration in the future).
+- Dependency Injection: Facilitates switching to database storage seamlessly.
+- Logging: Records request details for comprehensive monitoring.
 
 ## Getting Started
 
